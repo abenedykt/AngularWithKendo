@@ -1,0 +1,54 @@
+<select kendo-drop-down-list k-options="dropDownOptions" ng-model="dropDownItem">
+    <option value="1">opcja 1</option>
+    <option value="2">opcja 2</option>
+    <option value="3">opcja 3</option>
+</select><span>{{ dropDownItem }}</span>  <br/><br/>
+
+<input kendo-auto-complete k-options="autoCompleteOptions" ng-model="neighbour"/><span>{{ neighbour }}</span> <br/><br/>
+
+<div kendo-calendar ng-model="calendar"/><span>{{ calendar }}</span> <br/><br/>
+
+<input kendo-date-picker ng-model="pickedDate"/><span>{{ pickedDate }}</span> <br/><br/>
+
+<input kendo-date-time-picker ng-model="pickedDateTime"/><span>{{ pickedDateTime }}</span> <br/><br/>
+
+<input kendo-numeric-text-box k-format="'#'" k-min="'0'" k-max="'10'" ng-model="integerValue"/><span> {{ integerValue }}</span> <br/><br/>
+
+
+<textarea kendo-editor ng-model="editedText"></textarea><br/>
+<span>{{ editedText }}</span><br/><br/>
+
+<div kendo-grid style="height:300px"></div>
+
+
+<div kendo-grid=""
+     k-data-source="products"
+     k-selectable="'row'"
+     k-pageable="{ &quot;refresh&quot;: true, &quot;pageSizes&quot;: true }"
+     k-columns="[{ &quot;field&quot;: &quot;ProductName&quot;, &quot;title&quot;: &quot;Name&quot;},
+                      { &quot;field&quot;: &quot;Supplier.SupplierName&quot;, &quot;title&quot;: &quot;Supplier&quot;},
+                      { &quot;field&quot;: &quot;Category.CategoryName&quot;, &quot;title&quot;: &quot;Category&quot; }]"
+     k-sortable="true"
+     k-groupable="true"
+     k-filterable="true"
+     data-role="grid"
+     class="k-grid k-widget">
+
+    <div class="k-grouping-header" data-role="droptarget">Drag a column header and drop it here to group by that column</div>
+<div class="k-grid-header" style="padding-right: 17px;">
+    <div class="k-grid-header-wrap">
+        <table role="grid" cellspacing="0"><colgroup><col><col><col></colgroup><thead><tr><th role="columnheader" data-field="ProductName" data-title="Name" class="k-header k-filterable" data-role="sortable" data-dir="asc" aria-sort="ascending"><a class="k-grid-filter" href="#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="#">Name<span class="k-icon k-i-arrow-n"></span></a></th><th role="columnheader" data-field="Supplier.SupplierName" data-title="Supplier" class="k-header k-filterable" data-role="sortable"><a class="k-grid-filter" href="#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="#">Supplier</a></th><th role="columnheader" data-field="Category.CategoryName" data-title="Category" class="k-header k-filterable" data-role="sortable"><a class="k-grid-filter" href="#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="#">Category</a></th></tr></thead></table></div></div><div class="k-grid-content"><table cellspacing="0" role="grid" data-role="selectable" class="k-selectable"><colgroup><col><col><col></colgroup><tbody><tr data-uid="347abdba-cc64-40ea-991b-84281e41727a" role="row"><td role="gridcell">Alice Mutton</td><td role="gridcell">Pavlova, Ltd.</td><td role="gridcell">Meat/Poultry</td></tr><tr class="k-alt" data-uid="6c5fd6c7-083a-4151-926d-b36bd1e17513" role="row"><td role="gridcell">Aniseed Syrup</td><td role="gridcell">Exotic Liquids</td><td role="gridcell">Condiments</td></tr><tr data-uid="0272ecda-6c07-48f6-be95-6da368545107" role="row"><td role="gridcell">Carnarvon Tigers</td><td role="gridcell">Pavlova, Ltd.</td><td role="gridcell">Seafood</td></tr><tr class="k-alt" data-uid="e6a27c63-187c-4325-8d3a-2620f15d853b" role="row"><td role="gridcell">Chai</td><td role="gridcell">Exotic Liquids</td><td role="gridcell">Beverages</td></tr><tr data-uid="aab5153a-9189-44a6-bfa0-52909141ac7a" role="row"><td role="gridcell">Chang</td><td role="gridcell">Exotic Liquids</td><td role="gridcell">Beverages</td></tr></tbody></table></div><div class="k-pager-wrap k-grid-pager k-widget" data-role="pager"><a href="#" title="Go to the first page" class="k-link k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-seek-w">Go to the first page</span></a><a href="#" title="Go to the previous page" class="k-link k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-arrow-w">Go to the previous page</span></a><ul class="k-pager-numbers k-reset"><li><span class="k-state-selected">1</span></li><li><a tabindex="-1" href="#" class="k-link" data-page="2">2</a></li><li><a tabindex="-1" href="#" class="k-link" data-page="3">3</a></li><li><a tabindex="-1" href="#" class="k-link" data-page="4">4</a></li></ul><a href="#" title="Go to the next page" class="k-link" data-page="2" tabindex="-1"><span class="k-icon k-i-arrow-e">Go to the next page</span></a><a href="#" title="Go to the last page" class="k-link" data-page="4" tabindex="-1"><span class="k-icon k-i-seek-e">Go to the last page</span></a><span class="k-pager-sizes k-label"><span style="" class="k-widget k-dropdown k-header" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-readonly="false" aria-busy="false"><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">5</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><select data-role="dropdownlist" style="display: none;"><option value="5">5</option><option value="10">10</option><option value="20">20</option></select></span>items per page</span><a href="#" class="k-pager-refresh k-link" title="Refresh"><span class="k-icon k-i-refresh">Refresh</span></a><span class="k-pager-info k-label">1 - 5 of 20 items</span></div></div>
+
+<button class="k-button" ng-click="window.open()">Open Modal</button>
+<div kendo-window="modal" k-title="'Sample Window'" k-visible="false" k-modal="true"></div>
+
+<ul kendo-tree-view>
+    <li>grupa1</li>
+    <li>grupa1</li>
+    <li>grupa1</li>
+    <li>grupa1</li>
+</ul>
+
+<hr/><br/>
+<input kendo-numeric-text-box ng-model="gaugeValue"/>
+<div kendo-radial-gauge="" ng-model="gaugeValue" ></div>
